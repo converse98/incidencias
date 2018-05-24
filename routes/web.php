@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('reportar', function(){ //rutas en español, para el usuario
+	return view('report'); //nombres en ingles: variables y vistas, acontrollers y tablas
+});
