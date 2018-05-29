@@ -3,12 +3,17 @@
 	<div class="panel-body">
 		<div class="list-group">
  			@if(auth()->check())
-				<a href="#" class="list-group-item list-group-item-action">
+				<a href="/home" class="list-group-item list-group-item-action">
 					Dashboard
 				</a>
 				<a href="#" class="list-group-item list-group-item-action">
 					Ver solicitudes
 				</a>
+
+				<a href="/reportar" class="list-group-item list-group-item-action">
+					Reportar incidencias
+				</a>
+
 				<a href="#" class="list-group-item list-group-item-action">
 					Administración
 				</a>
