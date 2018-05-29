@@ -18,8 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/reportar', 'HomeController@report');
 
-
-Route::get('reportar', function(){ //rutas en español, para el usuario
-	return view('report'); //nombres en ingles: variables y vistas, acontrollers y tablas
+Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
+Route::get('/usuarios', 'User/controllerHomeController@index');
+Route::get('/proyectos', 'ProjectController@index');
+Route::get('/config', 'ConfigControllerr@index');
 });
