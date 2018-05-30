@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,19 +72,20 @@
                         <a href="{{ url('/home') }}">Inicio</a>
                     @else
                         <a href="{{ route('login') }}">Entrar</a>
-                        <a href="{{ route('register') }}">Registro</a>
+                        <a href="{{ route('register') }}">Registrarse</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    S.G.S
+                    Sistema de gestión de solicitudes
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/home') }}">Inicio</a>
-                    <a href="https://www.unjbg.edu.pe">UNJBG</a>
+                    <a href="http://unjbg.edu.pe">UNJBG</a>
+                    <a href="https://www.youtube.com/watch?v=bM7SZ5SBzyY">chau</a>
+                    
                 </div>
             </div>
         </div>

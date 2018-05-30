@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="panel panel-default">
-       <div class="panel-heading">Dashboard</div>
+       <div class="panel-heading">Reportar incidencia</div>
             <div class="panel-body">
                     <form action="">
                         <div class="form-group">

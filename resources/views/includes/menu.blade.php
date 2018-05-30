@@ -1,34 +1,26 @@
 <div class="panel panel-primary">
 	<div class="panel-heading">Menu</div>
 	<div class="panel-body">
-		<div class="list-group">
+		<ul class="nav nav-pills nav-stacked">
  			@if(auth()->check())
-				<a href="/home" class="list-group-item list-group-item-action">
-					Dashboard
-				</a>
-				<a href="#" class="list-group-item list-group-item-action">
-					Ver solicitudes
-				</a>
-
-				<a href="/reportar" class="list-group-item list-group-item-action">
-					Reportar incidencias
-				</a>
-
-				<a href="#" class="list-group-item list-group-item-action">
-					Administración
-				</a>
+				<li><a href="/home">Dashboard</a></li>
+				<li><a href="/ver">Ver solicitudes</a></li>
+				<li><a href="/reportar">Reportar incidencias</a></li>
+				<li role="presentation" class="dropdown">
+				    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administración<span class="caret"></span>
+				    </a>
+				    	<ul class="dropdown-menu">
+				    		<li><a href="/usuarios">Usuarios</a></li>
+				    		<li><a href="/solicitudes">Solicitudes</a></li>	
+				    		<li><a href="/config">Configuración</a></li>
+				    	</ul>
+				</li>
 			@else
-				<a href="#" class="list-group-item list-group-item-action">
-					Bienvenido
-				</a>
-				<a href="#" class="list-group-item list-group-item-action">
-					Instrucciones
-				</a>
-				<a href="#" class="list-group-item list-group-item-action">
-					Créditos
-				</a>
+				<li><a href="/">Bienvenido</a></li>
+				<li><a href="/instrucciones">Instrucciones</a></li>
+				<li><a href="/acerca-de">Créditos</a></li>
 			@endif
-		</div>
+		</ul>
 	</div>
 </div>
 

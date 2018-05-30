@@ -20,8 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/reportar', 'HomeController@report');
 
-Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
-Route::get('/usuarios', 'User/controllerHomeController@index');
-Route::get('/proyectos', 'ProjectController@index');
-Route::get('/config', 'ConfigControllerr@index');
+Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function(){
+	Route::get('/usuarios', 'UserController@index');
+	Route::get('/solicitudes', 'RequestsController@index');
+	Route::get('/config', 'ConfigController@index');
 });
