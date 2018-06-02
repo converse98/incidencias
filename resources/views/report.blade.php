@@ -8,7 +8,10 @@
                         <div class="form-group">
                             <label for="category_id">Categoria</label>
                             <select name="category_id" class="form-control">
-                                
+                                <option value="0">General</option>
+                                @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
                             </select>
                         </div>
 

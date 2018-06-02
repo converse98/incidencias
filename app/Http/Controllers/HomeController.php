@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,9 @@ class HomeController extends Controller
     }
     public function report()
     { //rutas en español, para el usuario
-        return view('report'); //nombres en ingles: variables y vistas, acontrollers y tablas
+        //$project=Project::find(1);
+        //$categories=$project->categories;
+        $categories=Category::where('project_id',1)->get();
+        return view('report')->with(compact('categories')); //nombres en ingles: variables y vistas, acontrollers y tablas
     }
 }
