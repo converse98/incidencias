@@ -3,8 +3,23 @@
 @section('content')
     <div class="panel panel-default">
        <div class="panel-heading">Reportar incidencia</div>
+            
+
             <div class="panel-body">
-                    <form action="">
+                    
+                @if(count($errors)>0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                    <form action="" method="POST">
+                        {{ csrf_field() }}
+
                         <div class="form-group">
                             <label for="category_id">Categoria</label>
                             <select name="category_id" class="form-control">
@@ -25,11 +40,11 @@
                         </div>
                         <div class="form-group">
                             <label for="title">Titulo</label>
-                            <input type="title" name="title" class="form-control">
+                            <input type="title" name="title" class="form-control" value="{{ old ('title') }}">
                         </div>
                         <div class="form-group">
                             <label for="description">Descripcion</label>
-                            <textarea name="description" class="form-control"></textarea>
+                            <textarea name="description" class="form-control">{{ old ('description') }}</textarea>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary">Registrar incidencia</button>
