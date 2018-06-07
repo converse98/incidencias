@@ -13,7 +13,7 @@
 				
 				@if(auth()->user()->is_admin)
 
-				<li role="presentation" class="dropdown">
+					<li role="presentation" class="dropdown">
 				    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administración<span class="caret"></span>
 				    </a>
 				    	<ul class="dropdown-menu">
@@ -21,9 +21,9 @@
 				    		<li><a href="/solicitudes">Solicitudes</a></li>	
 				    		<li><a href="/config">Configuración</a></li>
 				    	</ul>
-				</li>
+					</li>
 				@endif
-			@else
+			@else:
 				<li><a href="/">Bienvenido</a></li>
 				<li><a href="/instrucciones">Instrucciones</a></li>
 				<li><a href="/acerca-de">Créditos</a></li>

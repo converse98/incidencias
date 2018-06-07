@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->smallInteger('role')->default(2); //0: Admin | 1: Support | 2: cubrid_client_encoding()
 
             $table->rememberToken();
+            $table->SoftDeletes();
             $table->timestamps();
         });
     }
