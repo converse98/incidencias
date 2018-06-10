@@ -23,6 +23,7 @@ Route::get('/reportar', 'HomeController@getreport');
 Route::post('/reportar', 'HomeController@postreport');
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function(){
+	//Usuarios
 	Route::get('/usuarios', 'UserController@index');
 	Route::post('/usuarios', 'UserController@store');
 	
@@ -30,7 +31,16 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function(){
 	Route::post('/usuario/{id}', 'UserController@update');
 
 	Route::get('/usuario/{id}/eliminar', 'UserController@delete');
+
+	//solicitudes
+	Route::get('/solicitudes', 'ProjectController@index');
+	Route::post('/solicitudes', 'ProjectController@store');
+
+	Route::get('/solicitud/{id}', 'ProjectController@edit');
+	Route::post('/solicitud/{id}', 'ProjectController@update');
+
+	Route::get('/solicitud/{id}/eliminar', 'ProjectController@delete');
+	Route::get('/solicitud/{id}/restaurar', 'ProjectController@restore');
 	
-	Route::get('/solicitudes', 'RequestsController@index');
 	Route::get('/config', 'ConfigController@index');
 });
