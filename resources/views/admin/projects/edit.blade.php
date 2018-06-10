@@ -48,35 +48,74 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                        <p>Categorías<p>
-                        <form action="/categorias" method="POST" class="form-inline">
-                            <div class="form-group">
-                            <imput type="text" placeholder="ingrese nombre" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary">Añadir</button>
-                            </div>
-                        </form>
-                        
-                        <table class="table table-bordered">
-                        </table>
-                    </div>
+                            <p>Categorías<p>
+                            <form action="/categorias" method="POST" class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" placeholder="ingrese nombre" class="form-control">
+                                </div>
+                                    <button class="btn btn-primary">Añadir</button>
+                            </form>
 
-                    <div class="col-md-6">
-                        <p>Niveles<p>
-                        <form action="/niveles" method="POST" class="form-inline">
-                            <div class="form-group">
-                            <imput type="text" placeholder="ingrese nombre" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary">Añadir</button>
-                            </div>
-                        </form>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Proyecto</th>
+                                        <th>Nivel</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Proyecto A</td>
+                                        <td>Nivel 1</td>
+                                        <td>
+                                            <a href="" class="btn btn-sm btn-primary" title="Editar">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="" class="btn btn-sm btn-danger" title="Dar de baja">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                        <table class="table table-bordered">
-                        </table>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Niveles<p>
+                            <form action="/niveles" method="POST" class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" placeholder="ingrese nombre" class="form-control">
+                                </div>
+                                    <button class="btn btn-primary">Añadir</button>
+                            </form>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Proyecto</th>
+                                        <th>Nivel</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Proyecto A</td>
+                                        <td>Nivel 1</td>
+                                        <td>
+                                            <a href="" class="btn btn-sm btn-primary" title="Editar">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="" class="btn btn-sm btn-danger" title="Dar de baja">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
-        </div>
     </div>
 </div>
 

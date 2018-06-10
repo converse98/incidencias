@@ -55,7 +55,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Poryecto A</td>
+                                <td>Proyecto A</td>
                                 <td>Nivel 1</td>
                                 <td>
                                     <a href="" class="btn btn-sm btn-primary" title="Editar">
