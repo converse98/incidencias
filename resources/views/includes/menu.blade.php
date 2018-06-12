@@ -9,7 +9,7 @@
 				<li @if(request()->is('ver')) class="active" @endif><a href="/ver">Ver solicitudes</a></li>
 				@endif
 				
-				<li @if(request()->is('reportar')) class="active" @endif ><a href="/reportar">Reportar incidencias</a></li>
+				<li @if(request()->is('reportar')) class="active" @endif ><a href="/reportar">Reportar solicitud</a></li>
 				
 				@if(auth()->user()->is_admin)
 
@@ -23,7 +23,7 @@
 				    	</ul>
 					</li>
 				@endif
-			@else:
+			@else
 				<li><a href="/">Bienvenido</a></li>
 				<li><a href="/instrucciones">Instrucciones</a></li>
 				<li><a href="/acerca-de">Créditos</a></li>

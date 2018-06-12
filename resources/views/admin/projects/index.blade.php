@@ -64,14 +64,15 @@
                                 <td>{{ $project->description }}</td>
                                 <td>{{ $project->start ?: 'No se ha indicado' }}</td>
                                 <td>
-                                    <a href="/solicitud/{{ $project->id}}" class="btn btn-sm btn-primary" title="Editar">
-                                        <span class="glyphicon glyphicon-pencil"></span>
-                                    </a>
+                                    
                                     @if ($project->trashed())
-                                    <a href="/solicitud/{{$project->id}}/restaurar" class="btn btn-sm btn-danger" title="Dar de baja">
+                                    <a href="/solicitud/{{$project->id}}/restaurar" class="btn btn-sm btn-success" title="Restaurar">
                                         <span class="glyphicon glyphicon-remove"></span>
                                     </a>
                                     @else
+                                    <a href="/solicitud/{{ $project->id}}" class="btn btn-sm btn-primary" title="Editar">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a>
                                     <a href="/solicitud/{{$project->id}}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                                         <span class="glyphicon glyphicon-remove"></span>
                                     </a>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="panel panel-default">
-       <div class="panel-heading">Reportar incidencia</div>
+       <div class="panel-heading">Reportar solicitud</div>
             
 
             <div class="panel-body">
@@ -47,7 +47,7 @@
                             <textarea name="description" class="form-control">{{ old ('description') }}</textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary">Registrar incidencia</button>
+                            <button class="btn btn-primary">Registrar solicitud</button>
                         </div>
                     </form>
             </div>

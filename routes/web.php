@@ -42,5 +42,17 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function(){
 	Route::get('/solicitud/{id}/eliminar', 'ProjectController@delete');
 	Route::get('/solicitud/{id}/restaurar', 'ProjectController@restore');
 	
+	//Categorias
+	Route::post('/categorias','CategoryController@store');
+	Route::post('/categoria/editar','CategoryController@update');
+	Route::get('/categoria/{id}/eliminar','CategoryController@delete');
+
+	//Nivel
+	Route::post('/niveles','LevelController@store');
+	Route::post('/nivel/editar','LevelController@update');
+	Route::get('/nivel/{id}/eliminar','LevelController@delete');
+
+
+
 	Route::get('/config', 'ConfigController@index');
 });

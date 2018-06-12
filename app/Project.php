@@ -22,4 +22,14 @@ class Project extends Model
 
         'name', 'description', 'start'
     ];
+
+    public function categories()
+    {
+        return $this->hasMany('App\Category');
+    }
+
+    public function levels()
+    {
+        return $this->hasMany('App\Level');
+    }
 }
