@@ -8,6 +8,12 @@ use App\Level;
 
 class LevelController extends Controller
 {
+    //webservice 
+    public function byProject($id)
+    {
+        return Level::where('project_id',$id)->get(); // rspta automática en JSON
+    }
+
     public function store(Request $request)
     {
     	$this->validate($request,[
