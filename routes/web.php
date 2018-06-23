@@ -17,10 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
+Route::get('/seleccionar/proyecto/{id}', 'HomeController@selectProject');
 
-Route::get('/reportar', 'HomeController@getreport');
-Route::post('/reportar', 'HomeController@postreport');
+Route::get('/reportar', 'IncidentController@create');
+Route::post('/reportar', 'IncidentController@store');
+
+Route::get('/ver/{id}', 'IncidentController@show');
+
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function(){
 	//Usuarios

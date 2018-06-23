@@ -21,6 +21,11 @@ class CreateUsersTable extends Migration
 
             $table->smallInteger('role')->default(2); //0: Admin | 1: Support | 2: cubrid_client_encoding()
 
+
+           $table->integer('selected_project_id')->unsigned()->nullable();
+           $table->foreign('selected_project_id')->references('id')->on('projects');
+
+
             $table->rememberToken();
             $table->SoftDeletes();
             $table->timestamps();
