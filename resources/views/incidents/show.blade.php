@@ -4,7 +4,13 @@
     <div class="panel panel-default">
        <div class="panel-heading">Dashboard</div>
             <div class="panel-body">
-                    
+
+               @if(session('notification'))
+                    <div class="alert alert-success">
+                        {{ session('notification') }}
+                    </div>
+                @endif
+  
                 @if(count($errors)>0)
                 <div class="alert alert-danger">
                     <ul>
@@ -36,7 +42,7 @@
                     <thead>
                         <tr>
                             <th>Asignada a</th>
-                            <th>Visibilidad</th>
+                            <th>Nivel</th>
                             <th>Estado</th>
                             <th>Severidad</th>
                         </tr>
@@ -44,7 +50,7 @@
                     <tbody>
                         <tr>
                             <td id="incident_responsible"> {{$incident->support_name}}</td>
-                            <td>Público</td>
+                            <td>{{ $incident->level->name }}</td>
                             <td id="incident_state">{{$incident->state}}</td>
                             <td id="incident_severity">{{$incident->severity_full}}</td>
                         </tr>
@@ -67,10 +73,36 @@
                         </tr>
                     </tbody>
                 </table>
+                @if ($incident->support_id == null && $incident->active)
+                    <a href="/incidencia/{{ $incident->id }}/atender" class="btn btn-primary" style="" id="incident_btn_apply">
+                        Atender incidencia
+                    </a>
+                @endif
 
-                <button class="btn btn-primary" style="" id="incident_btn_apply">
-                    Atender incidencia
-                </button>
+                @if (auth()->user()->id ==$incident->client_id) 
+                    <!-- Lo vemos porque somos el cliente que ha creado la incidencia-->
+                    @if ($incident->active)
+                        <a href="/incidencia/{{ $incident->id }}/resolver" class="btn btn-info btn-sm" style="" id="incident_btn_solve">
+                            Marcar como resuelto
+                        </a>
+                    @else
+                         <a href="/incidencia/{{ $incident->id }}/abrir" class="btn btn-info btn-sm" style="" id="incident_btn_open">
+                            Volver a abrir incidencia
+                        </a>                   
+                    @endif
+
+
+
+                @endif
+
+                <a href="/incidencia/{{ $incident->id }}/editar" class="btn btn-success btn-sm" style="" id="incident_btn_edit">
+                    Editar incidencia
+                </a>
+                    @if (auth()->user()->id == $incident->support_id && $incident->active)
+                    <a href="/incidencia/{{ $incident->id }}/derivar" class="btn btn-danger btn-sm" style="" id="incident_btn_derive">
+                        Derivar al siguiente nivel
+                    </a>
+                @endif
 
 </div>
 </div>

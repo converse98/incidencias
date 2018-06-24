@@ -14,6 +14,11 @@ class Incident extends Model
     }
 
 
+    public function level()
+    {
+        return $this->belongsto('App\Level');
+    }
+
     public function project()
     {
         return $this->belongsto('App\Project');
