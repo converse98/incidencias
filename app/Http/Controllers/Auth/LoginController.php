@@ -44,7 +44,8 @@ class LoginController extends Controller
         $user=auth()->user();
         if(! $user->selected_project_id){
             if($user->is_admin || $user->is_client){
-                $user->selected_project_id= Project::first()->id;
+                return;
+                //$user->selected_project_id= Project::first()->id;
             } else{
                 //support
                 //y si el usuario  de soporte no esta asociado a ningun proyecto?
