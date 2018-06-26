@@ -30,6 +30,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function canTake(Incident $incident)
+    {
+        return ProjectUser::where('user_id', $this->id)
+                    ->where('level_id', $incident->level_id)
+                    ->first();
+    }
 
     //relaciones
 
