@@ -90,9 +90,18 @@ class IncidentController extends Controller
         $user=auth()->user();
 
         $incident->client_id=$user->id;
-        $incident->project_id=$user->selected_project_id;
-        $incident->level_id=Project::find($user->selected_project_id)->first_level_id;
+        
 
+        if($user->is_client && $user->selected_project_id==null)
+        {
+            $incident->project_id=1;
+            $incident->level_id=Project::find(1)->first_level_id;
+        }
+        else
+        {
+            $incident->level_id=Project::find($user->selected_project_id)->first_level_id;
+            $incident->project_id=$user->selected_project_id;
+        }
 
         $incident->save();
         

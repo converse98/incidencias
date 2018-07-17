@@ -83,7 +83,7 @@
                                     <td> {{$incident->created_at}} </td>
                                     <td> {{$incident->title_short}} </td>
                                     <td>
-                                        <a href="" class="btn btn-primary btn-sm">
+                                        <a href="/incidencia/{{ $incident->id }}/atender" class="btn btn-primary btn-sm">
                                             Atender
                                         </a>
                                     </td>
@@ -127,7 +127,7 @@
                                     <td> {{$incident->created_at}} </td>
                                     <td> {{$incident->title_short}} </td>
                                     <td>
-                                        {{$incident->support_id?: 'Sin asignar'}}
+                                        {{$incident->support_name?: 'Sin asignar'}}
                                     </td>
                                 </tr>
                                 @endforeach
