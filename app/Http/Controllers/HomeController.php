@@ -33,10 +33,9 @@ class HomeController extends Controller
         if($user->is_support){
 
 
-        $my_incidents=Incident::where('project_id',$selected_project_id)->          where('support_id',$user->id)->get();
+        $my_incidents=Incident::where('project_id',$selected_project_id)->where('support_id',$user->id)->get();
 
         $projectUser=ProjectUser::where('project_id',$selected_project_id)->where('user_id',$user->id)->first();
-
 
 
         $pending_incidents=Incident::where('support_id',null)->where('level_id',$projectUser->level_id)->get();

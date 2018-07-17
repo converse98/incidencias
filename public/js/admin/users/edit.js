@@ -1,5 +1,5 @@
 $(function(){
-	$('#select-project').on('change', onSelectProjectChange);
+	$('#select-project').on('change', onSelectProjectChange);  // id == #	
 });
 
 function onSelectProjectChange() 

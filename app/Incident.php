@@ -78,6 +78,11 @@ class Incident extends Model
     	return mb_strimwidth($this->title, 0, 20,'...');
     }
 
+     public function getTitleLargeAttribute()
+    {   
+        return mb_strimwidth($this->title, 0, 30,'...');
+    }
+
     //category_name
 
     public function getCategoryNameAttribute()

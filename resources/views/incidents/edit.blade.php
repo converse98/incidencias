@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="panel panel-default">
+   <!-- <div class="panel panel-default">
         <div class="panel-heading">Formulario de solicitud</div>
         <div class="panel-body">
             <div class="form-group">
@@ -107,7 +107,7 @@
   
 
     </div>
-
+-->
     <div class="panel panel-default">
        <div class="panel-heading">Reportar solicitud</div>
             <div class="panel-body">

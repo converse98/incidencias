@@ -24,6 +24,45 @@ class IncidentController extends Controller
         return view('incidents.show')->with(compact('incident', 'messages'));
     }
 
+    public function showall()
+    {
+        $user=auth()->user();
+        $selected_project_id=$user->selected_project_id;
+
+        $pending_incidents=Incident::where('project_id',$selected_project_id)->where('support_id',null)->get();
+
+         $doing_incidents=Incident::where('project_id',$selected_project_id)->where('support_id','is not null')->get();
+
+         $finish_incidents=Incident::where('project_id',$selected_project_id)->where('active',0)->get();
+
+        return view('incidents.showall')->with(compact('pending_incidents','doing_incidents','finish_incidents'));
+    }
+
+    public function pendiente()
+    {
+         $user=auth()->user();
+        $selected_project_id=$user->selected_project_id;
+
+         return Incident::where('project_id',$selected_project_id)->where('support_id',null)->get();
+    }
+
+    public function enproceso()
+    {
+         $user=auth()->user();
+        $selected_project_id=$user->selected_project_id;
+
+         return Incident::where('project_id',$selected_project_id)->where('support_id','<>',null)->get();
+    }
+
+    public function resuelto()
+    {
+         $user=auth()->user();
+        $selected_project_id=$user->selected_project_id;
+
+         return Incident::where('project_id',$selected_project_id)->where('active',0)->get();
+    }
+
+
 	public function create()
     { //rutas en español, para el usuario
         //$project=Project::find(1);
@@ -63,7 +102,7 @@ class IncidentController extends Controller
     {
         $incident = Incident::findOrFail($id);
         $categories = $incident->project->categories;
-        return view('incidents.edit')->with(compact('incident'));
+        return view('incidents.edit')->with(compact('incident','categories'));
     }
     public function update(Request $request, $id)
     {

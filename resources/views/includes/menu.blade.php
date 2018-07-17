@@ -5,7 +5,7 @@
  			@if(auth()->check())
 				<li @if(request()->is('home')) class="active" @endif><a href="/home">Dashboard</a></li>
 				
-				@if (!auth()->user()->is_client)
+				@if (!auth()->user()->is_client && !auth()->user()->is_support)
 				<li @if(request()->is('ver')) class="active" @endif><a href="/ver">Ver solicitudes</a></li>
 				@endif
 				
@@ -19,7 +19,6 @@
 				    	<ul class="dropdown-menu">
 				    		<li><a href="/usuarios">Usuarios</a></li>
 				    		<li><a href="/solicitudes">Solicitudes</a></li>	
-				    		<li><a href="/config">Configuración</a></li>
 				    	</ul>
 					</li>
 				@endif

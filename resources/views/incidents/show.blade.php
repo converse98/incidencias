@@ -103,13 +103,13 @@
                 @endif
         </div>
     </div>
-<div class="panel panel-primary">
+<!--<div class="panel panel-primary">
     <div class="panel-heading">Dashboard</div>
 
     <div class="panel-body">
     </div>
 </div>
-
+-->
 
 @include('layouts.chat')
 @endsection
