@@ -83,9 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://unjbg.edu.pe">UNJBG</a>
-                    <a href="https://www.youtube.com/watch?v=bM7SZ5SBzyY">chau</a>
-                    
+                    <a href="http://unjbg.edu.pe">UNJBG</a>                    
                 </div>
             </div>
         </div>

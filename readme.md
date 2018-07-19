@@ -6,7 +6,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-
+## Instructiones
+<p>
+	1.-Crear una base de datos "incidencias".
+	2.-importar el archivo "incidencias.sql" en la base de datos "incidencias".
+	3.-En cmd ejecutar en la misma carpeta donde se encuentra el repositorio incidencias las siguientes lineas de codigo.
+	# php artisan migrate:refresh --seed
+	# php artisan serve
+	3.-Abrir la direccion que muestra en respuesta al paso 2.
+</p>
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
