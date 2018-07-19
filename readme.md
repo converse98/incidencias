@@ -8,12 +8,12 @@
 </p>
 ## Instructiones
 <p>
-	1.-Crear una base de datos "incidencias".
-	2.-importar el archivo "incidencias.sql" en la base de datos "incidencias".
-	3.-En cmd ejecutar en la misma carpeta donde se encuentra el repositorio incidencias las siguientes lineas de codigo.
-	# php artisan migrate:refresh --seed
-	# php artisan serve
-	3.-Abrir la direccion que muestra en respuesta al paso 2.
+	1.-Crear una base de datos "incidencias".<br>
+	2.-importar el archivo "incidencias.sql" en la base de datos "incidencias".<br>
+	3.-En cmd ejecutar en la misma carpeta donde se encuentra el repositorio incidencias las siguientes lineas de codigo.<br>
+	# php artisan migrate:refresh --seed<br>
+	# php artisan serve<br>
+	3.-Abrir la direccion que muestra en respuesta al paso 2.<br>
 </p>
 ## About Laravel
 
