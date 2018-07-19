@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="panel panel-default">
-       <div class="panel-heading"> Registrar usuario</div>
+       <div class="panel-heading"> Registrar Proyecto</div>
             
 
             <div class="panel-body">
@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-primary">Registrar Solicitud</button>
+                            <button class="btn btn-primary">Registrar Proyecto</button>
                         </div>
                         
                     </form>

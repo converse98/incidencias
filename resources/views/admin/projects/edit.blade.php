@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="panel panel-default">
-       <div class="panel-heading">Editar usuario</div>
+       <div class="panel-heading">Editar proyecto</div>
             
 
         <div class="panel-body">
@@ -32,7 +32,7 @@
 
                          <div class="form-group">
                             <label for="description">Descripción</label>
-                            <input type="text" name="description" class="form-control" value="{{ old('description', $project->description)}}">
+                            <input type="text"  name="description" class="form-control" value="{{ old('description', $project->description)}}">
                         </div>
 
                         <div class="form-group">

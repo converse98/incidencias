@@ -18,7 +18,7 @@
 				    </a>
 				    	<ul class="dropdown-menu">
 				    		<li><a href="/usuarios">Usuarios</a></li>
-				    		<li><a href="/solicitudes">Solicitudes</a></li>	
+				    		<li><a href="/solicitudes">Proyectos</a></li>	
 				    	</ul>
 					</li>
 				@endif
